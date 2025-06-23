@@ -1,0 +1,162 @@
+.silkscreen-regular {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.silkscreen-bold {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Layout */
+body {
+  margin: 0;
+  font-family: "Silkscreen", sans-serif;
+  color: white;
+  background-color: lightskyblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Menu */
+#menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#menu h1 {
+  font-size: 3rem;
+}
+
+
+
+#menu button,
+#gameOver button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Silkscreen", sans-serif;
+  transition: background 0.2s, color 0.2s;
+}
+
+#menu button:hover,
+#menu button:active,
+#gameOver button:hover,
+#gameOver button:active {
+  background-color: #FFD600 !important;
+}
+
+#startBtn,
+#retryBtn {
+  background-color: #2196F3;
+  color: white;
+}
+
+#donateBtn,
+#donateAgainBtn {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* Game Area */
+#game {
+  position: relative;
+  width: 1000px;
+  height: 500px;
+  background-color: lightskyblue;
+  overflow: hidden;
+  border: 2px solid #000;
+  margin-top: 30px;
+}
+
+#droplet {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+}
+
+#goop {
+  width: 50px;
+  height: 50px;
+  background-color: purple;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: moveGoop 2s linear infinite;
+}
+
+#score {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#lives {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 2rem;
+  z-index: 10;
+}
+
+/* Game Over Overlay */
+#gameOver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(135, 206, 250, 0.658);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+/* Animation */
+@keyframes moveCactus {
+  0% {
+    right: -25px;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes moveGoop {
+  0% {
+    right: -25px;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+.charity-yellow {
+  color: #FFD600 !important;
+}
