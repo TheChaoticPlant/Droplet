@@ -10,7 +10,6 @@
   font-style: normal;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -43,8 +42,6 @@ body {
   font-size: 3rem;
 }
 
-
-
 #menu button,
 #gameOver button {
   padding: 10px 20px;
@@ -60,19 +57,41 @@ body {
 #menu button:active,
 #gameOver button:hover,
 #gameOver button:active {
-  background-color: #FFD600 !important;
+  background-color: #ffd600 !important;
 }
 
 #startBtn,
 #retryBtn {
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: white;
 }
 
 #donateBtn,
 #donateAgainBtn {
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: white;
+}
+
+/* Add this rule to match the main menu button with other blue buttons */
+#mainMenuBtn,
+#midMenuBtn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+#mainMenuBtn:hover,
+#mainMenuBtn:active,
+#midMenuBtn:hover,
+#midMenuBtn:active {
+  background-color: #ffd600 !important;
+  color: #222 !important;
 }
 
 /* Game Area */
@@ -138,6 +157,40 @@ body {
   text-align: center;
 }
 
+/* Difficulty Select */
+#difficultySelect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#difficultySelect label {
+  font-family: "Silkscreen", sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-right: 8px;
+}
+
+#difficultySelect select {
+  font-family: "Silkscreen", sans-serif;
+  font-size: 1.1rem;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+#difficultySelect select:focus,
+#difficultySelect select:hover {
+  background: #ffd600;
+  color: #222;
+}
+
 /* Animation */
 @keyframes moveCactus {
   0% {
@@ -158,5 +211,53 @@ body {
 }
 
 .charity-yellow {
-  color: #FFD600 !important;
+  color: #ffd600 !important;
+}
+
+@media (max-width: 768px) {
+  #game {
+    width: 98vw;
+    height: 60vw;
+    min-height: 250px;
+    max-height: 80vw;
+  }
+  #droplet,
+  #goop {
+    width: 70px;
+    height: 70px;
+  }
+  #score {
+    font-size: 3.5rem;
+    top: 18px;
+    right: 18px;
+  }
+  #lives {
+    font-size: 3.5rem;
+    top: 18px;
+    left: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  #game {
+    width: 100vw;
+    height: 65vw;
+    min-height: 180px;
+    max-height: 90vw;
+  }
+  #droplet,
+  #goop {
+    width: 100px;
+    height: 100px;
+  }
+  #score {
+    font-size: 5rem;
+    top: 22px;
+    right: 22px;
+  }
+  #lives {
+    font-size: 5rem;
+    top: 22px;
+    left: 22px;
+  }
 }
