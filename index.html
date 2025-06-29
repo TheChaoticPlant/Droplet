@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Droplet</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!-- Menu -->
-        <div id="menu">
-            <h1>Droplet</h1>
-            <h2>a journey with <span class="charity-yellow">charity:water</span></h2>
-            <button id="startBtn">Start Journey</button>
-            <button id="donateBtn">Donate</button>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Droplet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Menu -->
+    <div id="menu">
+      <h1>Droplet</h1>
+      <h2>a journey with <span class="charity-yellow">charity:water</span></h2>
+      <button id="startBtn">Start Journey</button>
+      <button id="donateBtn">Donate</button>
+    </div>
 
-        <!-- Game -->
-        <div id="gameContainer"></div>
+    <!-- Game -->
+    <div id="gameContainer"></div>
 
-        <!-- Game Over -->
-        <div id="gameOver" style="display: none;">
-            <h2>Game Over</h2>
-            <p id="finalScore"></p>
-            <button id="retryBtn">Try Again</button>
-            <button id="donateAgainBtn">Donate</button>
-        </div>
+    <!-- Game Over -->
+    <div id="gameOver" style="display: none">
+      <h2>Game Over</h2>
+      <p id="finalScore"></p>
+      <button id="retryBtn">Try Again</button>
+      <button id="donateAgainBtn">Donate</button>
+      <button id="mainMenuBtn">Main Menu</button>
+    </div>
 
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+
+    <footer style="width:100%;text-align:center;padding:18px 0 10px 0;background:rgb(33, 150, 243);font-family:'Silkscreen',sans-serif;font-size:1.1rem;position:fixed;bottom:0;left:0;z-index:10000;">
+      Support <a href="https://www.charitywater.org/" target="_blank" style="color:#ffd600;text-decoration:none;">charity: water</a> &nbsp;|&nbsp;
+      <a href="https://www.charitywater.org/donate" target="_blank" style="color:#ffd600;text-decoration:none;">Donate Now</a>
+    </footer>
+  </body>
 </html>
-
